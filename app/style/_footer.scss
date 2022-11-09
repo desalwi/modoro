@@ -1,0 +1,221 @@
+.footer {
+
+    background-color: $darkBlue;
+    columns: $white;
+    padding: 2.5rem 0rem;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        padding: 2.5rem 0rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding: 6rem 0rem;
+    }
+
+    .container {
+        
+
+        @include breakpoint-up(medium) {
+            display: grid;
+            grid-template-columns:  1fr 1fr 2fr;
+            // grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 8rem auto auto;
+            grid-template-areas: 
+                "logo logo social"
+                "links1 links2 cta"
+                "links1 links2 copyright"
+            ;
+    
+            justify-items: start;
+        }
+
+        @include breakpoint-up(large) {
+            display: grid;
+            grid-template-columns:  2fr repeat(2, 1fr) 3.5fr;
+            // grid-template-rows: repeat(2, 1fr);
+            grid-template-rows: 4rem 12rem auto;
+            grid-template-areas: 
+                "logo links1 links2 cta"
+                "logo links1 links2 cta"
+                "social links1 links2 copyright"
+            ;
+    
+            justify-items: start;
+        }
+
+        
+
+    }
+
+    a {
+        color: $white;
+        // transition: all 150ms ease;
+        // &:hover {
+        //     color: $limeGreen;
+        // }
+    }
+
+    &__logo {
+        display: inline-block;
+        margin-bottom: 1.875rem;
+
+        @include breakpoint-up(large) {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint-up(medium) {
+            grid-area: logo;
+        }
+    }
+
+    &__social {
+        margin-bottom: 1.875rem;
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: flex !important;
+        }
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 0;
+            display: flex;
+        }
+
+        @include breakpoint-up(medium) {
+            grid-area: social;
+            align-self: start;
+            justify-self: end;
+        }
+        @include breakpoint-up(large) {
+            align-self: end;
+            justify-self: start;
+        }
+
+        a:not(:last-child) {
+            display: inline-block;
+            margin-right: 1.2rem;
+        }
+
+        img {
+            width: 24px;
+            opacity: .3;
+            transition: all 200ms ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 3;
+        font-size: $font-sm;
+
+        
+
+        @include breakpoint-up(medium) {
+            align-items: start;
+            line-height: 2;
+            gap: 1em;
+            // justify-content: space-between;
+        }
+
+        &.col1 {
+
+            @include breakpoint-up(medium) {
+                grid-area: links1;
+            }
+
+        }
+
+        &.col2 {
+            margin-bottom: 1.875rem;
+
+            @include breakpoint-up(medium) {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint-up(medium) {
+                grid-area: links2;
+            }
+        }
+        
+        a {
+            color: $white;
+            transition: all 150ms ease;
+            position: relative;
+
+            &:before {
+                position:absolute;
+                content: "";
+                display: block;
+                height: 1px;
+                // background: linear-gradient(to right, $bluewater, $aqua);
+                background-color: $pink;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                // opacity: 0;
+                // width: 0;
+                width: 100%;
+                transform: scaleX(0);
+                transform-origin: bottom right;
+                // transition: opacity 200ms ease, width 200ms ease;
+                transition: transform 200ms ease;
+
+            }
+
+            &:hover {
+                color: $pink;
+
+                &:before {
+                    background-color: $pink;
+                    // background: linear-gradient(to right, $bluewater, $aqua);
+                    // opacity: 1;
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                    // width: 100%;
+                }
+            }
+        }
+
+        // a {
+        //     &:hover {
+        //         color: $limeGreen;
+        //     }
+        // }
+    }
+
+    &__cta {
+
+        @include breakpoint-up(medium) {
+            grid-area: cta;
+            text-align: right;
+            justify-self: end;
+        }
+
+        a.button {
+            margin-bottom: 1.875rem;
+
+            @include breakpoint-up(large) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: $font-sm;
+        @include breakpoint-up(medium) {
+            grid-area: copyright;
+            align-self: end;
+            // text-align: right;
+            justify-self: end;
+        }
+    }
+
+}

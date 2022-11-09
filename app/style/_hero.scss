@@ -1,0 +1,125 @@
+.hero {
+
+    // background-color: $veryLightGray;
+
+    .container {
+        @include breakpoint-up(large) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__image {
+        position: relative;
+        // background-image: url('/images/visual/swoosh.svg');
+        // background-size: 90%;
+        background-size: 23rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 27rem;
+
+        // @include breakpoint-down(medium) {
+        //     position: relative;
+        // }
+
+        @include breakpoint-up(medium) {
+            min-height: 38rem;
+            background-size: 44rem;
+        }
+
+        @include breakpoint-up(large) {
+            flex: 3;
+            order: 2;
+            // min-height: 41rem;
+            min-height: 90vh;
+            // background-image: url('/images/visual/swoosh.svg');
+            background-position: center center;
+            background-size: 100%;
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -1rem;
+            background-image: url('/images/visual/istockphoto-1167772588-612x612.png');
+            // background-size: 90%;
+            background-size: 29rem;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+
+            @include breakpoint-up(medium) {
+                min-height: 36rem;
+                background-size: 55rem;
+                bottom: -4rem;
+            }
+
+            @include breakpoint-up(large) {
+                background-image: url('/images/visual/manwithlaptop.png');
+                // background-size: 70%;
+                background-size: 32rem;
+                background-position: right bottom;
+                // background-size: 36%;
+                // background-position: 10% 22%;
+                // position: absolute;
+                position: absolute;
+                bottom: -6rem;
+            }
+
+            
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            bottom: -1rem;
+            background-image: url('/images/visual/swoosh.svg');
+            // background-size: 90%;
+            background-size: 29rem;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+
+            @include breakpoint-up(medium) {
+                min-height: 36rem;
+                background-size: 55rem;
+                bottom: -4rem;
+            }
+
+            @include breakpoint-up(large) {
+                background-image: url('/images/visual/swoosh.svg');
+                // background-size: 70%;
+                background-size: 100%;
+                background-position: right bottom;
+                // background-size: 36%;
+                // background-position: 10% 22%;
+                // position: absolute;
+                position: absolute;
+                bottom: 0;
+                transform: scale(1.6);
+                transform-origin: bottom left;
+                left: 17px;
+                z-index: -77;
+            }
+
+            
+        }
+    }
+
+    &__text {
+
+        text-align: center;
+
+        @include breakpoint-up(large) {
+            flex: 2;
+            order: 1;
+            text-align: left;
+        }
+        
+        
+
+        
+    }
+}

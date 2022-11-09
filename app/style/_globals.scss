@@ -1,0 +1,212 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: $font-sm;
+    color: $grayishBlue;
+    line-height: 1.3;
+    font-weight: 300;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    // font-family: 'Public Sans', sans-serif;
+
+    @include breakpoint-up(large) {
+        font-size: $font-reg;
+    }
+
+    &.noscroll {
+        overflow: hidden;
+    }
+
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 700;
+    line-height: 1.2;
+    color: $darkBlue;
+}
+
+h1 {
+    font-size: 2.31rem;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint-up(large) {
+        font-size: $font-xl;
+        line-height: 1.1;
+    }
+}
+
+h2 {
+    font-size: 1.875rem;
+    margin-bottom: 1.5625rem;
+
+    @include breakpoint-up(large){
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+}
+
+p {
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+//Spacing
+.container {
+    max-width: 69.375rem;
+    margin: 0 auto;
+    // padding-top: 2.25rem;
+    // padding-left: 1.5rem;
+    // padding-right: 1.5rem;
+    // padding-bottom: 2.25rem;
+
+    &--pa {
+        padding-top: 4.375rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+    }
+
+    &--py {
+        padding-top: 4.375rem;
+        padding-bottom: 4.375rem;
+    }
+    &--px {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    &--pt {
+        padding-top: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-top: 6rem;
+        }
+    }
+
+    &--pr {
+        padding-right: 1.5rem;
+    }
+
+    &--pb {
+        padding-bottom: 4.375rem;
+
+        @include breakpoint-up(large){
+            padding-bottom: 6rem;
+        }
+    }
+
+    &--pl {
+        padding-left: 1.5rem;   
+    }
+}
+
+//flexbox style
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+}
+
+//button
+button, .button {
+    position: relative;
+    display: inline-block;
+    padding: .875rem 2.1875rem;
+    // background-image: linear-gradient(to right, $aqua, $bluewater, $purple, $pink);
+    background-color: $darkBlue;
+    border: 0;
+    color: $white;
+    font-weight: 400;
+    // border-radius: 50px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-size: $font-sm;
+    transition: opacity 300ms ease;
+    overflow: hidden;
+    z-index: 8;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        background-color: $pink;
+        // background-color: rgba($color: #ffffff, $alpha: 0.25);
+        // opacity: 0;
+        // transition: opacity 150ms ease;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 200ms ease;
+    }
+    
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+        // z-index: 0;
+        // opacity: 1;
+    }
+
+    // span {
+    //     display: inline-block;
+    //     z-index: 9;
+    // }
+}
+
+.btn-outline {
+    outline: 1px solid #ffffff3b;
+
+}
+
+//visibility
+.hide-for-mobile {
+    @include breakpoint-down(medium) {
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+//z-index
+.z8 {
+    z-index: 8;
+}
+
+//
