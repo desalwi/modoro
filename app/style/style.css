@@ -311,7 +311,7 @@ button:hover::before, .button:hover::before {
   height: 100%;
   position: absolute;
   bottom: -1rem;
-  background-image: url("/images/visual/istockphoto-1167772588-612x612.png");
+  background-image: url("../images/visual/manwithlaptoplong.png");
   background-size: 29rem;
   background-repeat: no-repeat;
   background-position: center bottom;
