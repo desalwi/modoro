@@ -479,6 +479,7 @@ button:hover::before, .button:hover::before {
     min-height: 90vh;
     background-position: center center;
     background-size: 100%;
+    overflow: visible;
   }
 }
 .hero__image::after {
