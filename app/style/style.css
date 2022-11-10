@@ -311,7 +311,7 @@ button:hover::before, .button:hover::before {
   height: 100%;
   position: absolute;
   bottom: -1rem;
-  background-image: url("images/visual/manwithlaptoplong.png");
+  background-image: url("https://raw.githubusercontent.com/desalwi/modoro/main/images/visual/manwithlaptoplong.png");
   background-size: 29rem;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -338,7 +338,7 @@ button:hover::before, .button:hover::before {
   height: 100%;
   position: absolute;
   bottom: -1rem;
-  background-image: url("/images/visual/swoosh.svg");
+  background-image: url("https://raw.githubusercontent.com/desalwi/modoro/23c480b26ef6e092623bc112762179594512c243/images/visual/swoosh.svg");
   background-size: 29rem;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -352,7 +352,7 @@ button:hover::before, .button:hover::before {
 }
 @media (min-width: 64em) {
   .hero__image::before {
-    background-image: url("/images/visual/swoosh.svg");
+    background-image: url("https://raw.githubusercontent.com/desalwi/modoro/23c480b26ef6e092623bc112762179594512c243/images/visual/swoosh.svg");
     background-size: 100%;
     background-position: right bottom;
     position: absolute;
