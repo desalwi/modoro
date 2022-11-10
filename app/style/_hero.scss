@@ -57,7 +57,7 @@
             }
 
             @include breakpoint-up(large) {
-                background-image: url('images/visual/manwithlaptop.png');
+                background-image: url('https://raw.githubusercontent.com/desalwi/modoro/main/images/visual/manwithlaptop.png');
                 // background-size: 70%;
                 background-size: 32rem;
                 background-position: right bottom;
