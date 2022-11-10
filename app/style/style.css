@@ -718,11 +718,12 @@ button:hover::before, .button:hover::before {
   }
 }
 .feature__item {
-  padding: 0.9375rem;
+  padding: 2.9375rem 0.9375rem;
 }
 @media (min-width: 40em) {
   .feature__item {
     flex: 0 0 50%;
+    padding: 0.9375rem;
   }
 }
 @media (min-width: 64em) {
@@ -743,7 +744,7 @@ button:hover::before, .button:hover::before {
 }
 .feature__title {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 500;
   line-height: 1.2;
   color: hsl(233deg, 26%, 24%);
   margin-bottom: 1rem;
@@ -757,6 +758,7 @@ button:hover::before, .button:hover::before {
 .feature__desc {
   font-size: 0.875rem;
   line-height: 1.5rem;
+  font-weight: 500;
 }
 
 .articles {
