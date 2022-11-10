@@ -4,8 +4,11 @@ const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const fadeElem = document.querySelectorAll('.has-fade');
 const menumove = document.querySelectorAll('.has-xmove');
+// var timeoutHandler = null;
+// const timeoutHandler = null;
 
-btnHamburger.addEventListener('click', function(){
+btnHamburger.addEventListener('click', function(event){
+    // fadeOutAndRemove(event.target);
     console.log('click hamburger');
 
     
@@ -15,6 +18,12 @@ btnHamburger.addEventListener('click', function(){
         fadeElem.forEach(function(element){
             element.classList.remove('fade-in');
             element.classList.add('fade-out');
+            // function fadeOutAndRemove(element) {
+            //   element.classList.add('fade-out');
+            //   element.addEventListener('transitionend', function () {
+            //     element.parentNode.removeChild(element);
+            //   });
+            // }
         });
         menumove.forEach(function(element){
           element.classList.remove('moverlin');
@@ -27,7 +36,7 @@ btnHamburger.addEventListener('click', function(){
         header.classList.add('open');
         fadeElem.forEach(function(element){
             element.classList.add('fade-in');
-            element.classList.remove('fade-out');
+            element.classList.remove('fade-out');            
         });
         menumove.forEach(function(element){
           element.classList.add('moverlin');
@@ -35,6 +44,13 @@ btnHamburger.addEventListener('click', function(){
       });
         
     }
+
+    // function fadeOutAndRemove(element) {
+    //   element.classList.add('fade-out');
+    //   element.addEventListener('transitionend', function () {
+    //     element.parentNode.removeChild(element);
+    //   });
+    // }
     
 });
 

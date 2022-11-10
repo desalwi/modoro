@@ -17,6 +17,8 @@
         background-repeat: no-repeat;
         background-position: center center;
         min-height: 27rem;
+        width: 100vw;
+        overflow: hidden;
 
         // @include breakpoint-down(medium) {
         //     position: relative;
@@ -25,6 +27,8 @@
         @include breakpoint-up(medium) {
             min-height: 38rem;
             background-size: 44rem;
+            width: 100vw;
+            overflow: hidden;
         }
 
         @include breakpoint-up(large) {
@@ -85,12 +89,13 @@
             bottom: -1rem;
             background-image: url("https://raw.githubusercontent.com/desalwi/modoro/23c480b26ef6e092623bc112762179594512c243/images/visual/swoosh.svg");
             // background-size: 90%;
-            background-size: 29rem;
+            // background-size: 29rem;
+            background-size: 100%;
             background-repeat: no-repeat;
             background-position: center bottom;
             animation: intromovezigzagmobile 3s ease-in-out forwards;
-                animation-delay: 1500ms;
-                opacity: 0;
+            animation-delay: 1500ms;
+            opacity: 0;
 
             @include breakpoint-up(medium) {
                 min-height: 36rem;

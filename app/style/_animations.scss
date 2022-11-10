@@ -6,6 +6,7 @@
     from {
         visibility: hidden;
         opacity: 0;
+
     }
     1% {
         visibility: visible;
@@ -38,8 +39,9 @@
 }
 
 .fade-out {
-    animation: fade-out 300ms ease forwards;
-    animation-delay: 4s;
+    // opacity: 0;
+    animation: fade-out 2400ms ease forwards;
+    // animation-delay: 4s;
 }
 
 
@@ -152,36 +154,36 @@
 
 .moverlin {
     // position: relative;
-    animation: moverlin 500ms ease-in-out forwards;
+    animation: moverlin 300ms ease-in-out forwards;
 }
 
 @keyframes moverlin {
     0% {
         opacity: 0;
-        transform: translateX(20px);
+        transform: translateY(10px);
         // line-height: 2;
     }
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateY(0px);
         // line-height: 1.5;
     }
 }
 
 .moverlout {
     // position: relative;
-    animation: moverlout 800ms ease-in-out forwards;
+    animation: moverlout 300ms ease-in-out forwards;
 }
 
 @keyframes moverlout {
     0% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateY(0px);
         // line-height: 2;
     }
     100% {
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateY(10px);
         // line-height: 1.5;
     }
 }
